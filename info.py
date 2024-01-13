@@ -11,14 +11,14 @@ def is_enabled(value, default):
 
 
 # PyroClient Setup 
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ['API_ID','29865786'])
+API_HASH = environ['API_HASH','7fb38a0e37e1ee03051e75da3cc1ffd9']
+BOT_TOKEN = environ['BOT_TOKEN','6688675673:AAG8siBL67lSSAZYI03gFOioaPBdDkzaFKQ']
 
 # Bot settings
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 PICS = (environ.get('PICS' ,'https://telegra.ph/file/45d559dc64f317a2d44d9.jpg https://telegra.ph/file/752d2f177d3aaedbb766b.jpg https://telegra.ph/file/af384f40de32c67f50b3a.jpg https://telegra.ph/file/2d97a771b1e87fa10d3d6.jpg https://telegra.ph/file/e21078f1af9c13fa123ea.jpg https://telegra.ph/file/80de951542c08709fd2eb.jpg https://telegra.ph/file/334bf8623a130a54236cf.jpg https://telegra.ph/file/b1048df4bf8f22433149b.jpg https://telegra.ph/file/a5684977ea3b36ff000de.jpg https://telegra.ph/file/a5684977ea3b36ff000de.jpg https://telegra.ph/file/53d40a7c67ff3f9953b3e.jpg https://telegra.ph/file/56c5453da2be9bb8bf582.jpg https://telegra.ph/file/a8c436b4cceab3850e1dc.jpg https://telegra.ph/file/eabd223b5f3d820cf56a0.jpg https://telegra.ph/file/777166d087c9b32ce7b71.jpg https://telegra.ph/file/4e7ec0052b61374c0cd5d.jpg')).split()
-UPTIME = time.time()
+UPTIME = time.time(True)
 
 # Admins, Channels & Users
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -32,7 +32,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://trprofilterbot1997:Trproautofilterbot@cluster0.fwfsilk.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://tamilrockersmoviesofficial:tamilmovies123@cluster0.g86wvsz.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 FILE_DB_URL = environ.get("FILE_DB_URL", DATABASE_URL)
 FILE_DB_NAME = environ.get("FILE_DB_NAME", DATABASE_NAME)
@@ -57,7 +57,7 @@ SHORT_API = environ.get("SHORT_API")
 
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
-MSG_ALRT = environ.get('MSG_ALRT', '✨ Hello Nanbha and Nanbis ❤️')
+MSG_ALRT = environ.get('MSG_ALRT', '✨ Hello Nanbha and Nanbis ❤️', True)
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001685721182))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Discussion_tr_links')
 P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "True"), True)
