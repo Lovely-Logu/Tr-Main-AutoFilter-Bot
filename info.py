@@ -57,7 +57,6 @@ SHORT_API = environ.get("SHORT_API")
 
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
-MSG_ALRT = environ.get('MSG_ALRT', '✨ Hello Nanbha and Nanbis ❤️', True)
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001685721182))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Discussion_tr_links')
 P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "True"), True)
