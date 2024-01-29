@@ -637,12 +637,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ 𝖡𝖺𝖼𝗄', 'help'),
             InlineKeyboardButton('⟲ 𝖱𝖾𝖿𝗋𝖾𝗌𝗁', 'rfrsh')
         ]]
-        files = await Media.count_documents()
+        total = await Media.count_documents()
         users = await db.total_users_count()
         chats = await db.total_chat_count()
-        u_size = get_size(await db.get_db_size())
-        f_size = get_size(536870912 - await db.get_db_size())
-        uptime = get_readable_time(time.time() - temp.START_TIME)
+        monsize = await db.get_db_size()
+        free = 536870912 - monsize
+        monsize = get_size(monsize)
+        free = get_size(free)
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.STATUS_TXT.format(total, users, chats, monsize, free), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     
     elif query.data == "rfrsh":
@@ -651,12 +652,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ 𝖡𝖺𝖼𝗄', 'help'),
             InlineKeyboardButton('⟲ 𝖱𝖾𝖿𝗋𝖾𝗌𝗁', 'rfrsh')
         ]]
-        files = await Media.count_documents()
+        total = await Media.count_documents()
         users = await db.total_users_count()
         chats = await db.total_chat_count()
-        u_size = get_size(await db.get_db_size())
-        f_size = get_size(536870912 - await db.get_db_size())
-        uptime = get_readable_time(time.time() - temp.START_TIME)
+        monsize = await db.get_db_size()
+        free = 536870912 - monsize
+        monsize = get_size(monsize)
+        free = get_size(free)
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.STATUS_TXT.format(total, users, chats, monsize, free), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
     
     elif query.data.startswith("setgs"):
