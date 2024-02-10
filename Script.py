@@ -186,8 +186,7 @@ Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs
 ◉ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ : <code>{}</code>  
 ◉ ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ : <code>{}</code>
 ◉ ᴜꜱᴇᴅ ᴅʙ ꜱɪᴢᴇ : <code>{}</code>
-◉ ꜰʀᴇᴇ ᴅʙ ꜱɪᴢᴇ : <code>{}</code>
-🚀 Bot Uptime: <code>{}</code></b>"""
+◉ ꜰʀᴇᴇ ᴅʙ ꜱɪᴢᴇ : <code>{}</code></b>"""
 
     LOG_TEXT_G = """<b>#ɴᴇᴡ_ɢʀᴏᴜᴩ
 
