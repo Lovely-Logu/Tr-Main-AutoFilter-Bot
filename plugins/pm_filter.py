@@ -2,7 +2,7 @@ import asyncio, re, ast, math, logging, pyrogram
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 from utils import get_shortlink 
-from info import AUTH_USERS, PM_IMDB, SINGLE_BUTTON, PROTECT_CONTENT, SPELL_CHECK_REPLY, IMDB_TEMPLATE, IMDB_DELET_TIME, PMFILTER, G_FILTER, SHORT_URL, SHORT_API
+from info import AUTH_USERS, PM_IMDB, SINGLE_BUTTON, PROTECT_CONTENT, SPELL_CHECK_REPLY,LANGUAGES, IMDB_TEMPLATE, IMDB_DELET_TIME, PMFILTER, G_FILTER, SHORT_URL, SHORT_API
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums 
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -55,7 +55,7 @@ async def pm_next_page(bot, query):
             
 
     btn.insert(0, [InlineKeyboardButton(f"🎬 {search} 🎬", callback_data="🔍❤️")])
-    btn.insert(1, [InlineKeyboardButton('🥰 ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ 🥰', url="https://t.me/Tr_LinksZz")])
+    btn.insert(1, [InlineKeyboardButton("📰 ʟᴀɴɢᴜᴀɢᴇs 📰", callback_data=f"languages#{key}#{req}#0")])
     btn.insert(2, [
         InlineKeyboardButton('📮 ɪɴғᴏ', callback_data='info'),
         InlineKeyboardButton('📟 ᴍᴏᴠɪᴇ', callback_data='movie'),
@@ -217,7 +217,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             
 
     btn.insert(0, [InlineKeyboardButton(f"🎬 {search} 🎬", callback_data="🔍❤️")])
-    btn.insert(1, [InlineKeyboardButton('🥰 ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ 🥰', url="https://t.me/Tr_LinksZz")])
+    btn.insert(1, [InlineKeyboardButton("📰 ʟᴀɴɢᴜᴀɢᴇs 📰", callback_data=f"languages#{key}#{req}#0")])
     btn.insert(2, [
         InlineKeyboardButton('📮 ɪɴғᴏ', callback_data='info'),
         InlineKeyboardButton('📟 ᴍᴏᴠɪᴇ', callback_data='movie'),
